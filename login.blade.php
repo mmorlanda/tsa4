@@ -1,0 +1,2 @@
+@extends('layouts.guest')
+@section('content')<h1>Sign in</h1><form method="POST" action="{{ route('login') }}">@csrf<label>Email<input type="email" name="email" value="{{ old('email') }}" required autofocus></label><label>Password<input type="password" name="password" required></label><label class="check"><input type="checkbox" name="remember"> Remember me</label><button>Log in</button></form><p><a href="{{ route('register') }}">Create an account</a></p>@endsection

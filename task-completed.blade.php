@@ -1,0 +1,1 @@
+<h1>Task completed</h1><p>The task <strong>{{ $task->title }}</strong> has been marked as done.</p>@if($task->description)<p>{{ $task->description }}</p>@endif<p>Completed on {{ now()->format('F j, Y g:i A') }}.</p>

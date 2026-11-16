@@ -1,0 +1,2 @@
+@extends('layouts.guest')
+@section('content')<h1>Create account</h1><form method="POST" action="{{ route('register') }}">@csrf<label>Name<input name="name" value="{{ old('name') }}" required></label><label>Email<input type="email" name="email" value="{{ old('email') }}" required></label><label>Password<input type="password" name="password" required></label><label>Confirm password<input type="password" name="password_confirmation" required></label><button>Register</button></form><p><a href="{{ route('login') }}">Already registered?</a></p>@endsection

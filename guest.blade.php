@@ -1,0 +1,1 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{{ config('app.name', 'Tasks for Today') }}</title>@vite('resources/css/app.css')</head><body><main class="auth-card">@yield('content')</main></body></html>

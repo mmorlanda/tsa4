@@ -1,0 +1,2 @@
+@extends('layouts.app')
+@section('content')<h1>{{ $task->title }}</h1><p>{{ $task->description ?: 'No description.' }}</p><p><strong>Status:</strong> {{ str_replace('_', ' ', ucfirst($task->status)) }}</p><p><strong>Due:</strong> {{ $task->due_date?->format('M j, Y') ?: 'No due date' }}</p>@auth<a class="button" href="{{ route('tasks.edit', $task) }}">Edit</a><form class="inline" method="POST" action="{{ route('tasks.destroy', $task) }}">@csrf @method('DELETE')<button class="danger" onclick="return confirm('Archive this task?')">Archive</button></form>@endauth@endsection
